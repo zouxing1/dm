@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="https://oss.tool.lu/cache/202105/09/204653dys99rfylff9kmdi.png.icon.png" type="image/x-icon">
+<head>
+	<meta charset="utf-8">
+	<title>课堂答题19班</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class='luck-back'>
+		<div class="luck-content ce-pack-end">
+			<div id="luckuser" class="slotMachine">
+				<div class="slot">
+					<span class="name">姓名</span>
+				</div>
+			</div>
+			<div class="luck-content-btn">
+				<a id="start" class="start" onclick="start()">开始</a>
+			</div>
+			<div class="luck-user">
+				<div class="luck-user-title">
+					<span>课堂答题点名</span>
+				</div>
+				<ul class="luck-user-list"></ul>
+				<div class="luck-user-btn">
+					<a href="#">请同学认真学习</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-2.2.1.min.js" type="text/javascript"></script>
+	<script>
+		var xinm = new Array();
+		xinm[0] =  xinm[0] =  "img/1.jpg"
+xinm[1] =  "img/2.jpg"
+xinm[2] =  "img/3.jpg"
+xinm[3] =  "img/4.jpg"
+xinm[4] =  "img/5.jpg"
+xinm[5] =  "img/6.jpg"
+xinm[6] =  "img/7.jpg"
+xinm[7] =  "img/1.jpg"
+xinm[8] =  "img/2.jpg"
+xinm[9] =  "img/3.jpg"
+xinm[10] =  "img/4.jpg"
+xinm[11] =  "img/5.jpg"
+xinm[12] =  "img/6.jpg"
+xinm[13] =  "img/7.jpg"
+xinm[14] =  "img/1.jpg"
+xinm[15] =  "img/2.jpg"
+xinm[16] =  "img/3.jpg"
+xinm[17] =  "img/4.jpg"
+xinm[18] =  "img/5.jpg"
+xinm[19] =  "img/6.jpg"
+xinm[20] =  "img/7.jpg"
+xinm[21] =  "img/1.jpg"
+xinm[22] =  "img/2.jpg"
+xinm[23] =  "img/3.jpg"
+xinm[24] =  "img/4.jpg"
+xinm[25] =  "img/5.jpg"
+xinm[26] =  "img/6.jpg"
+xinm[27] =  "img/7.jpg"
+xinm[28] =  "img/1.jpg"
+xinm[29] =  "img/20.jpg"
+xinm[30] =  "img/23.jpg"
+xinm[31] =  "img/14.jpg"
+xinm[32] =  "img/5.jpg"
+xinm[33] =  "img/16.jpg"
+xinm[34] =  "img/27.jpg"
+xinm[35] =  "img/21.jpg"
+xinm[36] =  "img/23.jpg"
+xinm[37] =  "img/3.jpg"
+xinm[38] =  "img/14.jpg"
+xinm[39] =  "img/35.jpg"
+xinm[40] =  "img/26.jpg"
+xinm[41] =  "img/7.jpg"
+xinm[42] =  "img/1.jpg"
+xinm[43] =  "img/22.jpg"
+xinm[44] =  "img/33.jpg"
+xinm[45] =  "img/24.jpg"
+xinm[46] =  "img/15.jpg"
+xinm[47] =  "img/26.jpg"
+xinm[48] =  "img/37.jpg"
+xinm[49] =  "img/1.jpg"
+xinm[50] =  "img/2.jpg"
+xinm[51] =  "img/19.jpg"
+xinm[52] =  "img/18.jpg"
+xinm[53] =  "img/17.jpg"
+xinm[54] =  "img/16.jpg"
+xinm[55] =  "img/15.jpg"
+xinm[56] =  "img/14.jpg"
+xinm[57] =  "img/11.jpg"
+
+		var phone = new Array();
+		phone[0] = phone[0] = "刘善"
+phone[1] ="黄蓉"
+phone[2] ="张伟桥"
+phone[3] ="何李杰"
+phone[4] ="郭颜艺"
+phone[5] ="黄微"
+phone[6] ="肖家健"
+phone[7] ="余梦婷"
+phone[8] ="文琰"
+phone[9] ="刘子怡"
+phone[10] ="黄海燕"
+phone[11] ="刘维芳"
+phone[12] ="张文轩"
+phone[13] ="周子程"
+phone[14] ="肖玟颖"
+phone[15] ="何博"
+phone[16] ="凌娟"
+phone[17] ="黄露梦"
+phone[18] ="刘金玲"
+phone[19] ="李明芳"
+phone[20] ="胡林芳"
+phone[21] ="邱永洁"
+phone[22] ="赖慧"
+phone[23] ="王俊豪"
+phone[24] ="湛顺顺"
+phone[25] ="涂若菲"
+phone[26] ="廖艳萍"
+phone[27] ="李虹"
+phone[28] ="谢刘丽"
+phone[29] ="钟梦瑶"
+phone[30] ="郭玉清"
+phone[31] ="刘琪"
+phone[32] ="蒋静文"
+phone[33] ="肖族慧"
+phone[34] ="李超"
+phone[35] ="欧阳晓慧"
+phone[36] ="黄涵"
+phone[37] ="刘媛玫"
+phone[38] ="钟子雯"
+phone[39] ="钟桥香"
+phone[40] ="廖美琼"
+phone[41] ="钟彦良"
+phone[42] ="曹雨"
+phone[43] ="邬宛玲"
+phone[44] ="刘晓"
+phone[45] ="陈志琴"
+phone[46] ="曾九玉"
+phone[47] ="黄福兴"
+phone[48] ="廖泽旺"
+phone[49] ="刘丽芳"
+phone[50] ="何荣沛"
+phone[51] ="刘燕红"
+phone[52] ="黄垚"
+phone[53] ="朱丽"
+phone[54] ="张璐"
+phone[55] ="孙萌"
+phone[56] ="宋雅婷"
+phone[57] ="黎林婧"
+
+
+
+	</script>
+	<script src="js/Luckdraw.js" type="text/javascript"></script>
+	<div style="text-align:center;">
+</div>
+</body>
+</html>
